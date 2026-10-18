@@ -1,0 +1,17 @@
+:root { color-scheme: dark; font: 13px -apple-system, BlinkMacSystemFont, sans-serif; background: #000000; color: #EAEAEA; }
+* { box-sizing: border-box; }
+body { width: 300px; margin: 0; padding: 22px; }
+header { display: flex; align-items: center; gap: 12px; margin-bottom: 24px; }
+h1 { font-size: 17px; font-weight: 650; letter-spacing: -.3px; margin: 0 0 4px; }
+p { margin: 0; color: #A6A6A6; line-height: 1.5; }
+.setting { display: flex; align-items: center; gap: 12px; position: relative; padding: 15px 12px; background: #111111; border: 1px solid #292929; border-radius: 10px; cursor: pointer; }
+.setting > span:first-child { flex: 1; }
+input { position: absolute; right: 12px; width: 36px; height: 22px; margin: 0; opacity: 0; cursor: pointer; }
+.track { width: 36px; height: 22px; background: #444444; border-radius: 12px; padding: 3px; pointer-events: none; }
+.track::after { content: ""; display: block; width: 16px; height: 16px; background: #EAEAEA; border-radius: 50%; }
+input:checked + .track { background: #8AB4F8; }
+input:checked + .track::after { transform: translateX(14px); background: #000000; }
+input:focus-visible + .track { outline: 2px solid #EAEAEA; outline-offset: 4px; }
+input:disabled + .track { opacity: .5; }
+#status { margin: 12px 1px 20px; min-height: 39px; font-size: 12px; }
+footer { color: #A6A6A6; border-top: 1px solid #292929; padding-top: 14px; font-size: 11px; line-height: 1.7; }
